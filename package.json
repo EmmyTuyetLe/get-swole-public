@@ -1,0 +1,35 @@
+{
+  "name": "get-swole",
+  "version": "1.0.0",
+  "description": "Workout Journal Web Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production nodemon backend/index.js",
+    "dev": "nodemon backend/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexMNet/get-swole.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexMNet/get-swole/issues"
+  },
+  "homepage": "https://github.com/AlexMNet/get-swole#readme",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.6",
+    "nodemailer": "^6.7.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

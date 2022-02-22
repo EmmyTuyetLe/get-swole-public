@@ -1,0 +1,357 @@
+/* colors */
+:root {
+  --background: #312828;
+  --c-background: /* Insert Color Here */ ;
+  --pri-t: /* Insert Color Here */ ;
+  --sec-t: /* Insert Color Here */ ;
+  --tri-t: /* Insert Color Here */ ;
+  --pri-c: /* Insert Color Here */ ;
+  --sec-c: /* Insert Color Here */ ;
+  --navb-c: /* Insert Color Here */ ;
+
+  /* Typography */
+  --font:   /* Insert Font Here */ ;
+
+  /* Text Size */
+  /* h1 weight/Bold lineheight/80*/
+  --wh1: 72px;
+  --mh1: 56px;
+  /* h2 weight/Bold lineheight/64*/
+  --wh2: 56px;
+  --mh2: 40px;
+  /* h3 weight/Bold lineheight/48*/
+  --wh3: 40px;
+  --mh3: 24px;
+  /* h4 weight/Bold lineheight/32*/
+  --wh4: 24px;
+  --mh4: 16px;
+  /* h5 weight/Regular lineheight/24*/
+  --wh5: 16px;
+  /* --mh5: ; */
+  /* label weight/Bold lineheight/auto*/
+  --wlabel: 12px;
+  --mlabel: 12px;
+  /* text-big weight/Regular lineheight/32*/
+  --wtb: 20px;
+  --mtb: 20px;
+  /* text weight/Bold lineheight/24*/
+  --wt: 16px;
+  --mt: 12px;
+  /* text-Gray...input text weight/Regular lineheight/24*/
+  --wtg: 16px;
+  --mtg: 16px;
+  /* text-Gray weight/Bold lineheight/24*/
+  --wts: 12px;
+  --mts: 12px;
+  /* button text weight/Bold lineheight/24*/
+  --wb: 16px;
+  --mb: 24px;
+
+  /* Grid Layout */
+  --wcol: 10% 1fr 5% 1fr 10%;
+  --mcol: 5% auto 5%;
+  /* Section Padding */
+  --wpad: 50px 0;
+  --mpad: 10px 0;
+
+  /* Border Radius */
+  --brad: 10px;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Big Screens Up */
+@media screen and (max-width: 3000px) {
+  /* Web Font Sizes, weight, line Height */
+  h1 {
+    font-size: var(--wh1);
+    font-weight: Bold;
+    line-height: 80px;
+  }
+  h2 {
+    font-size: var(--wh2);
+    font-weight: Bold;
+    line-height: 64px;
+  }
+  h3 {
+    font-size: var(--wh3);
+    font-weight: Bold;
+    line-height: 48px;
+  }
+  h4 {
+    font-size: var(--wh4);
+    font-weight: Bold;
+    line-height: 32px;
+  }
+  h5 {
+    font-size: var(--wh5);
+    font-weight: normal;
+    line-height: 32px;
+  }
+  p {
+    font-size: var(--wt);
+    font-weight: Bold;
+    line-height: 24px;
+  }
+
+  /* THINGS THAT WONT CHANGE */
+  * {
+    transition: all 0.3s ease-in-out;
+  }
+  body {
+    width: 100vw;
+    background: var(--background);
+    font-family: var(--font);
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  .text-big {
+    font-size: 26px;
+    font-weight: lighter;
+    line-height: 32px;
+    font-family: "Roboto", sans-serif;
+  }
+  .text-gray {
+    /* Always couple with h5 */
+    color: var(--tri-t);
+  }
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    /* background-color: var(--pri-c); */
+    border: none;
+    border-radius: var(--brad);
+    /* color: var(--sec-t); */
+    cursor: pointer;
+    font-size: var(--wb);
+    font-weight: bold;
+    height: 48px;
+    line-height: 24px;
+    width: 170px;
+  }
+  button:hover,
+  input[type="button"]:hover,
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    /* background-color: var(--sec-c); */
+    /* color:var(--pri-t) */
+  }
+  button:active,
+  input[type="button"]:active,
+  input[type="submit"]:active,
+  input[type="reset"]:active {
+    background: var(--sec-c);
+    /* -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1; */
+    /* https://css-tricks.com/almanac/properties/b/box-shadow/ */
+    outline: none;
+  }
+  button:focus,
+  :focus input[type="button"]:focus,
+  input[type="submit"]:focus,
+  input[type="reset"]:focus {
+    background: #e5e5e5;
+  }
+
+  /* Header and Nav */
+  .navBar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  .navBar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .navBar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .navBar a.active {
+    background-color: #04aa6d;
+    color: white;
+  }
+  .navBar .icon {
+    display: none;
+  }
+  /* Hero Section */
+
+  /* navConnect2 Section */
+  .iandt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ionly :hover {
+    color: var(--sec-c);
+  }
+  .ionly:active {
+    color: var(--pri-c);
+  }
+  .feat-item-text {
+    text-align: center;
+    margin: 0;
+  } /* Modal CSS Code */
+  .modal {
+    /* to keep over the screen while scrolling */
+    position: fixed;
+    /* to center in middle of screen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    /* transition: 200ms ease-in-out; */
+    border: 1px solid black;
+    border-radius: var(--brad);
+    z-index: 10;
+    background-color: var(--sec-c);
+    width: 1000px;
+    max-width: 80%;
+    max-height: 85%;
+    overflow-y: scroll;
+  }
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  .modal .title {
+    font-size: var(--wh3);
+    font-weight: bold;
+    color: var(--sec-t);
+  }
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    width: auto;
+  }
+  .modal-text-title {
+    font-size: var(--wh4);
+    color: var(--sec-t);
+  }
+  .modal-body {
+    font-size: var(--wh5);
+    padding: 10px 15px;
+  }
+  .modal-text-bold {
+    font-weight: bold;
+  }
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    /* transition: 200ms ease-in-out; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* to click on button when class is not active */
+    pointer-events: none;
+    z-index: 2;
+  }
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* CTA Section */
+
+  /* Footer */
+}
+/* Desktops */
+@media screen and (max-width: 1920px) {
+}
+/* Laptops */
+@media screen and (max-width: 1440px) {
+}
+/* Tablet Devices */
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: var(--mh1);
+  }
+  h2 {
+    font-size: var(--mh2);
+  }
+  h3 {
+    font-size: var(--mh3);
+  }
+  h4 {
+    font-size: var(--mh4);
+  }
+  h5 {
+    font-size: var(--mh5);
+  }
+  p {
+    font-size: var(--mt);
+  }
+  .modal .title {
+    font-size: var(--mh3);
+  }
+
+  /* Header and Nav */
+  .navBar a:not(:first-child) {
+    display: none;
+  }
+  .navBar a.icon {
+    float: right;
+    display: block;
+  }
+  .navBar.responsive {
+    position: relative;
+  }
+  .navBar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navBar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+/* Mobile Landscape */
+@media screen and (max-width: 768px) {
+}
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .footer-logo {
+    justify-self: start;
+  }
+  .footer-link {
+    justify-self: start;
+  }
+  .footer-icons {
+    justify-self: start;
+  }
+  .foot2 {
+    text-align: start;
+    justify-self: start;
+  }
+  .foot3 {
+    text-align: start;
+    justify-self: start;
+  }
+  .foot4 {
+    text-align: start;
+    justify-self: start;
+  }
+}
