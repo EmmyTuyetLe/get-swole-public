@@ -9,7 +9,7 @@ A fitness app for users to log their workouts, track weights/prs, calculate weig
 1. Fork this repo
 2. Clone your forked repo onto your local computer and remember to run "npm install" to install all packages.
 3. Run this command once to setup upstream
-   > git remote add upstream https://github.com/Giuliorio/get-swole.git
+   > git remote add upstream https://github.com/EmmyTuyetLe/get-swole-public.git
 
 Now you're all set up.  
 **_The following steps must be run periodically to keep your work up-to-date! You can run these commands as often as possible. You want to fetch any new changes as soon as possible. Each time you want to begin working, or take a break from your work, run these first._**  
