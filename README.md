@@ -40,5 +40,5 @@ If you've created a new branch to work on rather than working directly on `devel
 
 ##### Pull Requests
 
-Once you are done working on your feature, you may go on to https://github.com/Giuliorio/get-swole.git to create apull request between your fork and the project repo.
+Once you are done working on your feature, you may go on to https://github.com/EmmyTuyetLe/get-swole-public.git to create apull request between your fork and the project repo.
 # get-swole-public
